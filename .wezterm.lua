@@ -6,7 +6,8 @@ wezterm.on("gui-startup", function(cmd)
 	local tab, pane, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
 	-- Create a split occupying the right 1/3 of the screen
-	pane:split({ size = 0.2 })
+	-- pane:split({ size = 0.8, direction = "Left" })
+	pane:split({ size = 0.8, direction = "Left" })
 	-- Create another split in the right of the remaining 2/3
 	-- of the space; the resultant split is in the middle
 	-- 1/3 of the display and has the focus.
@@ -25,7 +26,6 @@ config.inactive_pane_hsb = {
 	brightness = 0.7,
 }
 config.font_size = 10
-config.line_height = 1.2
 
 -- KEYS
 local act = wezterm.action
@@ -57,6 +57,11 @@ config.keys = {
 	{ key = "k", mods = "CTRL", action = act.ActivatePaneDirection("Up") },
 
 	{ key = "j", mods = "CTRL", action = act.ActivatePaneDirection("Down") },
+	{ key = "h", mods = "CTRL|ALT", action = act.AdjustPaneSize({ "Left", 1 }) },
+	{ key = "l", mods = "CTRL|ALT", action = act.AdjustPaneSize({ "Right", 1 }) },
+	{ key = "k", mods = "CTRL|ALT", action = act.AdjustPaneSize({ "Up", 1 }) },
+	{ key = "j", mods = "CTRL|ALT", action = act.AdjustPaneSize({ "Down", 1 }) },
+
 	{
 		key = "t",
 		mods = "CTRL",
@@ -148,22 +153,15 @@ config.key_tables = {
 	-- to define a key assignment for getting out of this mode.
 	-- 'resize_pane' here corresponds to the name="resize_pane" in
 	-- the key assignments above.
-	resize_pane = {
-		{ key = "LeftArrow", action = act.AdjustPaneSize({ "Left", 1 }) },
-		{ key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
-
-		{ key = "RightArrow", action = act.AdjustPaneSize({ "Right", 1 }) },
-		{ key = "l", action = act.AdjustPaneSize({ "Right", 1 }) },
-
-		{ key = "UpArrow", action = act.AdjustPaneSize({ "Up", 1 }) },
-		{ key = "k", action = act.AdjustPaneSize({ "Up", 1 }) },
-
-		{ key = "DownArrow", action = act.AdjustPaneSize({ "Down", 1 }) },
-		{ key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
-
-		-- Cancel the mode by pressing escape
-		{ key = "Escape", action = "PopKeyTable" },
-	},
+	-- resize_pane = {
+	-- 	{ key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
+	-- 	{ key = "l", action = act.AdjustPaneSize({ "Right", 1 }) },
+	-- 	{ key = "k", action = act.AdjustPaneSize({ "Up", 1 }) },
+	-- 	{ key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
+	--
+	-- 	-- Cancel the mode by pressing escape
+	-- 	{ key = "Escape", action = "PopKeyTable" },
+	-- },
 }
 
 return config
