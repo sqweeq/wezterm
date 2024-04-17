@@ -46,25 +46,25 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitPane({
 			direction = "Right",
-			command = { args = { "top" } },
+			-- command = { args = { "top" } },
 			size = { Percent = 50 },
 		}),
 	},
 	{
-		key = "]",
+		key = "}",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitPane({
 			direction = "Up",
-			command = { args = { "top" } },
+			-- command = { args = { "top" } },
 			size = { Percent = 50 },
 		}),
 	},
 	{
-		key = "[",
+		key = "{",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitPane({
 			direction = "Down",
-			command = { args = { "top" } },
+			-- command = { args = { "top" } },
 			size = { Percent = 50 },
 		}),
 	},
@@ -73,7 +73,7 @@ config.keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.SplitPane({
 			direction = "Left",
-			command = { args = { "top" } },
+			-- command = { args = { "top" } },
 			size = { Percent = 50 },
 		}),
 	},
