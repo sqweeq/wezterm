@@ -36,8 +36,8 @@ end)
 config.disable_default_key_bindings = true
 config.leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
-	{ key = "j", mods = "CTRL|ALT", action = act.ActivateTabRelative(1) },
-	{ key = "k", mods = "CTRL|ALT", action = act.ActivateTabRelative(-1) },
+	{ key = "l", mods = "CTRL|ALT", action = act.ActivateTabRelative(1) },
+	{ key = "h", mods = "CTRL|ALT", action = act.ActivateTabRelative(-1) },
 	{ key = "t", mods = "CTRL|ALT", action = act.SpawnTab("CurrentPaneDomain") },
 	{ key = "w", mods = "CTRL|ALT", action = act.CloseCurrentTab({ confirm = true }) },
 
