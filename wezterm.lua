@@ -103,7 +103,7 @@ config.keys = {
 	{ key = "=", mods = "CTRL", action = act.IncreaseFontSize },
 	{ key = "-", mods = "CTRL", action = act.DecreaseFontSize },
 	{
-		key = "v",
+		key = "V",
 		mods = "CTRL|SHIFT",
 		action = act.PasteFrom("Clipboard"),
 	},
