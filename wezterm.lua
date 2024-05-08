@@ -39,7 +39,7 @@ config.keys = {
 	{ key = "l", mods = "CTRL|ALT", action = act.ActivateTabRelative(1) },
 	{ key = "h", mods = "CTRL|ALT", action = act.ActivateTabRelative(-1) },
 	{ key = "t", mods = "CTRL|ALT", action = act.SpawnTab("CurrentPaneDomain") },
-	{ key = "w", mods = "CTRL|ALT", action = act.CloseCurrentTab({ confirm = true }) },
+	{ key = "x", mods = "CTRL|ALT", action = act.CloseCurrentTab({ confirm = true }) },
 
 	{
 		key = "|",
@@ -103,7 +103,7 @@ config.keys = {
 	{ key = "=", mods = "CTRL", action = act.IncreaseFontSize },
 	{ key = "-", mods = "CTRL", action = act.DecreaseFontSize },
 	{
-		key = "V",
+		key = "O",
 		mods = "CTRL|SHIFT",
 		action = act.PasteFrom("Clipboard"),
 	},
