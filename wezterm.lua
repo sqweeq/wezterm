@@ -88,14 +88,14 @@ config.keys = {
 	{ key = "k", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Up") },
 	{ key = "j", mods = "CTRL|SHIFT", action = act.ActivatePaneDirection("Down") },
 
-	{ key = "LeftArrow", mods = "CTRL|ALT", action = act.AdjustPaneSize({ "Left", 1 }) },
-	{ key = "RightArrow", mods = "CTRL|ALT", action = act.AdjustPaneSize({ "Right", 1 }) },
-	{ key = "UpArrow", mods = "CTRL|ALT", action = act.AdjustPaneSize({ "Up", 1 }) },
-	{ key = "DownArrow", mods = "CTRL|ALT", action = act.AdjustPaneSize({ "Down", 1 }) },
+	{ key = "LeftArrow", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Left", 1 }) },
+	{ key = "RightArrow", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Right", 1 }) },
+	{ key = "UpArrow", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Up", 1 }) },
+	{ key = "DownArrow", mods = "CTRL|SHIFT", action = act.AdjustPaneSize({ "Down", 1 }) },
 
 	{
-		key = "t",
-		mods = "CTRL|LEADER",
+		key = "T",
+		mods = "CTRL|SHIFT",
 		action = wezterm.action.TogglePaneZoomState,
 	},
 	{ key = "x", mods = "CTRL|SHIFT", action = act.CloseCurrentPane({ confirm = false }) },
