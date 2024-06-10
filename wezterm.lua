@@ -25,6 +25,11 @@ config.inactive_pane_hsb = {
 	saturation = 0.8,
 	brightness = 0.7,
 }
+
+-- config.font = wezterm.font("Bitstream Vera Sans Mono")
+-- config.font = wezterm.font("JetBrains Mono")
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
+
 config.font_size = 10
 
 -- KEYS
