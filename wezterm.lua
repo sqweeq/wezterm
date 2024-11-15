@@ -7,7 +7,6 @@ wezterm.on("gui-startup", function(cmd)
 	window:gui_window():maximize()
 	-- Create a split occupying the right 1/3 of the screen
 	-- pane:split({ size = 0.8, direction = "Left" })
-	pane:split({ size = 0.8, direction = "Left" })
 	-- Create another split in the right of the remaining 2/3
 	-- of the space; the resultant split is in the middle
 	-- 1/3 of the display and has the focus.
