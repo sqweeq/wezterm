@@ -29,7 +29,7 @@ config.inactive_pane_hsb = {
 -- config.font = wezterm.font("JetBrains Mono")
 config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
 
-config.font_size = 10
+config.font_size = 12
 
 -- KEYS
 local act = wezterm.action
