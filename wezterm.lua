@@ -20,6 +20,7 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
+config.scrollback_lines = 100000
 config.window_close_confirmation = "NeverPrompt"
 config.inactive_pane_hsb = {
 	saturation = 0.8,
@@ -180,6 +181,16 @@ config.keys = {
 		key = "Enter",
 		mods = "LEADER",
 		action = wezterm.action.ActivateCopyMode,
+	},
+	-- https://www.reddit.com/r/wezterm/comments/1egf4vy/im_a_little_bit_confused_by_the_search_overlay/
+	{
+		key = "Escape",
+		mods = "NONE",
+		action = act.Multiple({
+			act.CopyMode("ClearPattern"),
+			act.CopyMode("AcceptPattern"),
+			act.CopyMode({ SetSelectionMode = "Cell" }),
+		}),
 	},
 }
 config.key_tables = {
