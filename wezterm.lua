@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 local config = {}
+local act = wezterm.action
 
 wezterm.on("gui-startup", function(cmd)
 	local tab, pane, window = mux.spawn_window(cmd or {})
@@ -192,7 +193,22 @@ config.keys = {
 			act.CopyMode({ SetSelectionMode = "Cell" }),
 		}),
 	},
+	-- Rebind OPT-Left, OPT-Right as ALT-b, ALT-f respectively to match Terminal.app behavior
+	{
+		key = "LeftArrow",
+		mods = "OPT",
+		action = act.SendKey({
+			key = "b",
+			mods = "ALT",
+		}),
+	},
+	{
+		key = "RightArrow",
+		mods = "OPT",
+		action = act.SendKey({ key = "f", mods = "ALT" }),
+	},
 }
+
 config.key_tables = {
 	-- Defines the keys that are active in our resize-pane mode.
 	-- Since we're likely to want to make multiple adjustments,
