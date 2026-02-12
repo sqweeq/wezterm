@@ -3,6 +3,9 @@ local mux = wezterm.mux
 local config = {}
 local act = wezterm.action
 
+wezterm.local_echo_threshold_ms = 50 -- e.g., 20 seconds
+wezterm.maxfps = 120 -- e.g., 20 seconds
+
 wezterm.on("gui-startup", function(cmd)
 	local tab, pane, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
