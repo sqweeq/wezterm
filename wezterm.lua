@@ -16,7 +16,7 @@ wezterm.on("gui-startup", function(cmd)
 	-- 1/3 of the display and has the focus.
 	-- pane:split({ size = 0.5 })
 end)
-
+config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.window_padding = {
 	left = 0,
