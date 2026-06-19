@@ -3,7 +3,7 @@ local mux = wezterm.mux
 local config = {}
 local act = wezterm.action
 
--- wezterm.local_echo_threshold_ms = 20000 -- e.g., 20 seconds
+--- wezterm.local_echo_threshold_ms = 20000 -- e.g., 20 seconds
 wezterm.local_echo_threshold_ms = 40000 -- e.g., 20 seconds
 wezterm.maxfps = 120 -- e.g., 20 seconds
 wezterm.ssh_backend = "Ssh2"
